@@ -24,6 +24,15 @@
 
 import UIKit
 
+/**
+    Conical gradient layer draws a conical gradient over its background color,
+    filling the shape of the layer (i.e. including rounded corners).
+ 
+    You can set colors and locations for the gradient.
+
+    If no colors are set, default colors will be used.
+    If no locations are set, colors will be equally distributed.
+*/
 public class AEConicalGradientLayer: CALayer {
     
     // MARK: - Types
@@ -47,7 +56,17 @@ public class AEConicalGradientLayer: CALayer {
     
     // MARK: - Properties
     
+    /// The array of UIColor objects defining the color of each gradient stop.
+    /// Defaults to empty array. Animatable.
+
     public var colors = [UIColor]() { didSet { setNeedsDisplay() } }
+    
+    /// The array of Double values defining the location of each
+    /// gradient stop as a value in the range [0,1]. The values must be
+    /// monotonically increasing. If empty array is given, the stops are
+    /// assumed to spread uniformly across the [0,1] range.
+    /// Defaults to nil. Animatable.
+    
     public var locations = [Double]() { didSet { setNeedsDisplay() } }
     
     private var transitions = [Transition]()

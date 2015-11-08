@@ -24,10 +24,17 @@
 
 import UIKit
 
+/**
+    Conical gradient view is simple subclass of UIView 
+    which uses `AEConicalGradientLayer` as the view’s Core Animation layer.
+    
+    You can configure conical gradient options with `gradientLayer` property.
+*/
 public class AEConicalGradientView: UIView {
     
     // MARK: - Properties
     
+    /// Conical gradient layer of the view.
     public var gradientLayer: AEConicalGradientLayer { return layer as! AEConicalGradientLayer }
     
     // MARK: - Lifecycle
