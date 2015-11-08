@@ -28,6 +28,7 @@
 		8B1F6C3D1BEFCC1C005DC159 /* AEConicalGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEConicalGradientView.swift; sourceTree = "<group>"; };
 		8B1F6C401BEFCC90005DC159 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8B1F6C411BEFCC90005DC159 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8B1F6C441BEFF841005DC159 /* AEConicalGradient.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AEConicalGradient.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +50,7 @@
 				8B1F6C271BEFC98A005DC159 /* Products */,
 				8B1F6C401BEFCC90005DC159 /* LICENSE */,
 				8B1F6C411BEFCC90005DC159 /* README.md */,
+				8B1F6C441BEFF841005DC159 /* AEConicalGradient.podspec */,
 			);
 			sourceTree = "<group>";
 		};

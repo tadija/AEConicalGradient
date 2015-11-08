@@ -34,10 +34,14 @@ public class AEConicalGradientView: UIView {
     
     // MARK: - Properties
     
-    /// Conical gradient layer of the view.
+    /// The view’s conical gradient layer used for rendering. (read-only)
     public var gradientLayer: AEConicalGradientLayer { return layer as! AEConicalGradientLayer }
     
     // MARK: - Lifecycle
+    
+    public override class func layerClass() -> AnyClass {
+        return AEConicalGradientLayer.self
+    }
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -54,10 +58,6 @@ public class AEConicalGradientView: UIView {
         layer.drawsAsynchronously = true
         layer.needsDisplayOnBoundsChange = true
         layer.setNeedsDisplay()
-    }
-    
-    public override class func layerClass() -> AnyClass {
-        return AEConicalGradientLayer.self
     }
     
 }
