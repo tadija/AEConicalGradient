@@ -45,7 +45,7 @@
 		8B1F6C1D1BEFC98A005DC159 = {
 			isa = PBXGroup;
 			children = (
-				8B1F6C3B1BEFCC1C005DC159 /* Source */,
+				8B1F6C3B1BEFCC1C005DC159 /* Sources */,
 				8B1F6C281BEFC98A005DC159 /* Example */,
 				8B1F6C271BEFC98A005DC159 /* Products */,
 				8B1F6C401BEFCC90005DC159 /* LICENSE */,
@@ -75,13 +75,13 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
-		8B1F6C3B1BEFCC1C005DC159 /* Source */ = {
+		8B1F6C3B1BEFCC1C005DC159 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				8B1F6C3C1BEFCC1C005DC159 /* AEConicalGradientLayer.swift */,
 				8B1F6C3D1BEFCC1C005DC159 /* AEConicalGradientView.swift */,
 			);
-			path = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
