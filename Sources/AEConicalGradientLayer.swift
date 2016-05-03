@@ -73,6 +73,7 @@ public class AEConicalGradientLayer: CALayer {
     
     // MARK: - Lifecycle
     
+    /// This method is doing actual drawing of the conical gradient.
     public override func drawInContext(ctx: CGContext) {
         UIGraphicsPushContext(ctx)
         drawRect(CGContextGetClipBoundingBox(ctx))
