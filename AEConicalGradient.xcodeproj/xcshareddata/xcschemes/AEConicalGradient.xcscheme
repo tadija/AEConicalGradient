@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8B1F6C251BEFC98A005DC159"
-               BuildableName = "AEConicalGradient.app"
+               BlueprintIdentifier = "8BB80C9F1CD8D78600CFB4B9"
+               BuildableName = "AEConicalGradient.framework"
                BlueprintName = "AEConicalGradient"
                ReferencedContainer = "container:AEConicalGradient.xcodeproj">
             </BuildableReference>
@@ -32,8 +32,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8B1F6C251BEFC98A005DC159"
-            BuildableName = "AEConicalGradient.app"
+            BlueprintIdentifier = "8BB80C9F1CD8D78600CFB4B9"
+            BuildableName = "AEConicalGradient.framework"
             BlueprintName = "AEConicalGradient"
             ReferencedContainer = "container:AEConicalGradient.xcodeproj">
          </BuildableReference>
@@ -55,8 +55,8 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8B1F6C251BEFC98A005DC159"
-            BuildableName = "AEConicalGradient.app"
+            BlueprintIdentifier = "8BB80C9F1CD8D78600CFB4B9"
+            BuildableName = "AEConicalGradient.framework"
             BlueprintName = "AEConicalGradient"
             ReferencedContainer = "container:AEConicalGradient.xcodeproj">
          </BuildableReference>
@@ -74,8 +74,8 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "8B1F6C251BEFC98A005DC159"
-            BuildableName = "AEConicalGradient.app"
+            BlueprintIdentifier = "8BB80C9F1CD8D78600CFB4B9"
+            BuildableName = "AEConicalGradient.framework"
             BlueprintName = "AEConicalGradient"
             ReferencedContainer = "container:AEConicalGradient.xcodeproj">
          </BuildableReference>
