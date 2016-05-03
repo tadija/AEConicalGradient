@@ -1,7 +1,7 @@
 //
 // AEConicalGradientLayer
 //
-// Copyright © 2015 Marko Tadić <tadija@me.com> http://tadija.net
+// Copyright © 2015-2016 Marko Tadić <tadija@me.com> http://tadija.net
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -73,6 +73,7 @@ public class AEConicalGradientLayer: CALayer {
     
     // MARK: - Lifecycle
     
+    /// This method is doing actual drawing of the conical gradient.
     public override func drawInContext(ctx: CGContext) {
         UIGraphicsPushContext(ctx)
         drawRect(CGContextGetClipBoundingBox(ctx))
