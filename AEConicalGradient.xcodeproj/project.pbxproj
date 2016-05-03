@@ -8,15 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8BB80CA31CD8D78600CFB4B9 /* AEConicalGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB80CA21CD8D78600CFB4B9 /* AEConicalGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8BB80CD51CD8D98000CFB4B9 /* AEConicalGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1F6C3C1BEFCC1C005DC159 /* AEConicalGradientLayer.swift */; };
+		8BB80CD61CD8D98000CFB4B9 /* AEConicalGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1F6C3D1BEFCC1C005DC159 /* AEConicalGradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8B1F6C291BEFC98A005DC159 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8B1F6C2B1BEFC98A005DC159 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8B1F6C2E1BEFC98A005DC159 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8B1F6C301BEFC98A005DC159 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8B1F6C331BEFC98A005DC159 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8B1F6C351BEFC98A005DC159 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B1F6C3C1BEFCC1C005DC159 /* AEConicalGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEConicalGradientLayer.swift; sourceTree = "<group>"; };
 		8B1F6C3D1BEFCC1C005DC159 /* AEConicalGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AEConicalGradientView.swift; sourceTree = "<group>"; };
 		8B1F6C401BEFCC90005DC159 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -42,11 +38,8 @@
 			isa = PBXGroup;
 			children = (
 				8B1F6C3B1BEFCC1C005DC159 /* Sources */,
-				8B1F6C281BEFC98A005DC159 /* Example */,
 				8B1F6C271BEFC98A005DC159 /* Products */,
-				8B1F6C401BEFCC90005DC159 /* LICENSE */,
-				8B1F6C411BEFCC90005DC159 /* README.md */,
-				8B1F6C441BEFF841005DC159 /* AEConicalGradient.podspec */,
+				8BB80CC71CD8D8DE00CFB4B9 /* Supporting Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,19 +49,6 @@
 				8BB80CA01CD8D78600CFB4B9 /* AEConicalGradient.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		8B1F6C281BEFC98A005DC159 /* Example */ = {
-			isa = PBXGroup;
-			children = (
-				8B1F6C291BEFC98A005DC159 /* AppDelegate.swift */,
-				8B1F6C2B1BEFC98A005DC159 /* ViewController.swift */,
-				8B1F6C2D1BEFC98A005DC159 /* Main.storyboard */,
-				8B1F6C301BEFC98A005DC159 /* Assets.xcassets */,
-				8B1F6C321BEFC98A005DC159 /* LaunchScreen.storyboard */,
-				8B1F6C351BEFC98A005DC159 /* Info.plist */,
-			);
-			path = Example;
 			sourceTree = "<group>";
 		};
 		8B1F6C3B1BEFCC1C005DC159 /* Sources */ = {
@@ -86,6 +66,16 @@
 			children = (
 				8BB80CA21CD8D78600CFB4B9 /* AEConicalGradient.h */,
 				8BB80CA41CD8D78600CFB4B9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8BB80CC71CD8D8DE00CFB4B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B1F6C401BEFCC90005DC159 /* LICENSE */,
+				8B1F6C411BEFCC90005DC159 /* README.md */,
+				8B1F6C441BEFF841005DC159 /* AEConicalGradient.podspec */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -170,29 +160,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BB80CD51CD8D98000CFB4B9 /* AEConicalGradientLayer.swift in Sources */,
+				8BB80CD61CD8D98000CFB4B9 /* AEConicalGradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		8B1F6C2D1BEFC98A005DC159 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8B1F6C2E1BEFC98A005DC159 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8B1F6C321BEFC98A005DC159 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8B1F6C331BEFC98A005DC159 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8B1F6C361BEFC98A005DC159 /* Debug */ = {
@@ -289,7 +262,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.tadija.AEConicalGradient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -310,7 +282,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.tadija.AEConicalGradient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -339,6 +310,7 @@
 				8BB80CA71CD8D78600CFB4B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
