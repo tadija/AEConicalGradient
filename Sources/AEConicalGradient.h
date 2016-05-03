@@ -1,7 +1,7 @@
 //
 // AEConicalGradient.h
 //
-// Copyright © 2015 Marko Tadić <tadija@me.com> http://tadija.net
+// Copyright © 2015-2016 Marko Tadić <tadija@me.com> http://tadija.net
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -24,12 +24,5 @@
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for AEConicalGradient.
 FOUNDATION_EXPORT double AEConicalGradientVersionNumber;
-
-//! Project version string for AEConicalGradient.
 FOUNDATION_EXPORT const unsigned char AEConicalGradientVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <AEConicalGradient/PublicHeader.h>
-
-
