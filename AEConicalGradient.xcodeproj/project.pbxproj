@@ -21,6 +21,7 @@
 		8BB80CA01CD8D78600CFB4B9 /* AEConicalGradient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AEConicalGradient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB80CA21CD8D78600CFB4B9 /* AEConicalGradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEConicalGradient.h; sourceTree = "<group>"; };
 		8BB80CA41CD8D78600CFB4B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BB80CD91CD8DB5F00CFB4B9 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +76,7 @@
 			children = (
 				8B1F6C401BEFCC90005DC159 /* LICENSE */,
 				8B1F6C411BEFCC90005DC159 /* README.md */,
+				8BB80CD91CD8DB5F00CFB4B9 /* CHANGELOG.md */,
 				8B1F6C441BEFF841005DC159 /* AEConicalGradient.podspec */,
 			);
 			name = "Supporting Files";
