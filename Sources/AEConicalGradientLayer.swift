@@ -33,22 +33,22 @@ import UIKit
     If no colors are set, default colors will be used.
     If no locations are set, colors will be equally distributed.
 */
-public class AEConicalGradientLayer: CALayer {
+open class AEConicalGradientLayer: CALayer {
     
     // MARK: - Types
     
-    private struct Constants {
+    fileprivate struct Constants {
         static let MaxAngle = 2 * M_PI
         static let MaxHue = 255.0
     }
     
-    private struct Transition {
+    fileprivate struct Transition {
         let fromLocation: Double
         let toLocation: Double
         let fromColor: UIColor
         let toColor: UIColor
         
-        func colorForPercent(percent: Double) -> UIColor {
+        func colorForPercent(_ percent: Double) -> UIColor {
             let normalizedPercent = percent.convertFromRange(min: fromLocation, max: toLocation, toRangeMin: 0.0, max: 1.0)
             return UIColor.lerp(from: fromColor.rgba, to: toColor.rgba, percent: CGFloat(normalizedPercent))
         }
@@ -59,7 +59,7 @@ public class AEConicalGradientLayer: CALayer {
     /// The array of UIColor objects defining the color of each gradient stop.
     /// Defaults to empty array. Animatable.
 
-    public var colors = [UIColor]() { didSet { setNeedsDisplay() } }
+    open var colors = [UIColor]() { didSet { setNeedsDisplay() } }
     
     /// The array of Double values defining the location of each
     /// gradient stop as a value in the range [0,1]. The values must be
@@ -67,22 +67,22 @@ public class AEConicalGradientLayer: CALayer {
     /// assumed to spread uniformly across the [0,1] range.
     /// Defaults to nil. Animatable.
     
-    public var locations = [Double]() { didSet { setNeedsDisplay() } }
+    open var locations = [Double]() { didSet { setNeedsDisplay() } }
     
-    private var transitions = [Transition]()
+    fileprivate var transitions = [Transition]()
     
     // MARK: - Lifecycle
     
     /// This method is doing actual drawing of the conical gradient.
-    public override func drawInContext(ctx: CGContext) {
+    open override func draw(in ctx: CGContext) {
         UIGraphicsPushContext(ctx)
-        drawRect(CGContextGetClipBoundingBox(ctx))
+        drawRect(ctx.boundingBoxOfClipPath)
         UIGraphicsPopContext()
     }
     
     // MARK: - Helpers
     
-    private func drawRect(rect: CGRect) {
+    fileprivate func drawRect(_ rect: CGRect) {
         loadTransitions()
         
         let center = CGPoint(x: rect.midX, y: rect.midY)
@@ -97,8 +97,8 @@ public class AEConicalGradientLayer: CALayer {
             let startPoint = CGPoint(x: pointX, y: pointY)
             
             let line = UIBezierPath()
-            line.moveToPoint(startPoint)
-            line.addLineToPoint(center)
+            line.move(to: startPoint)
+            line.addLine(to: center)
             
             colorForAngle(angle).setStroke()
             line.stroke()
@@ -107,18 +107,18 @@ public class AEConicalGradientLayer: CALayer {
         }
     }
     
-    private func colorForAngle(angle: Double) -> UIColor {
+    fileprivate func colorForAngle(_ angle: Double) -> UIColor {
         let percent = angle.convertFromRangeZeroToMax(Constants.MaxAngle, toRangeZeroToMax: 1.0)
         guard let transition = transitionForPercent(percent) else { return spectrumColorForAngle(angle) }
         return transition.colorForPercent(percent)
     }
     
-    private func spectrumColorForAngle(angle: Double) -> UIColor {
+    fileprivate func spectrumColorForAngle(_ angle: Double) -> UIColor {
         let hue = angle.convertFromRangeZeroToMax(Constants.MaxAngle, toRangeZeroToMax: Constants.MaxHue)
         return UIColor(hue: CGFloat(hue / Constants.MaxHue), saturation: 1.0, brightness: 1.0, alpha: 1.0)
     }
     
-    private func loadTransitions() {
+    fileprivate func loadTransitions() {
         transitions.removeAll()
         
         if colors.count > 1 {
@@ -146,7 +146,7 @@ public class AEConicalGradientLayer: CALayer {
         }
     }
     
-    private func transitionForPercent(percent: Double) -> Transition? {
+    fileprivate func transitionForPercent(_ percent: Double) -> Transition? {
         let filtered = transitions.filter { percent >= $0.fromLocation && percent < $0.toLocation }
         let defaultTransition = percent <= 0.5 ? transitions.first : transitions.last
         return filtered.first ?? defaultTransition
@@ -170,7 +170,7 @@ private extension Double {
         return newValue
     }
     
-    func convertFromRangeZeroToMax(currentMaxValue: Double, toRangeZeroToMax newMaxValue: Double) -> Double {
+    func convertFromRangeZeroToMax(_ currentMaxValue: Double, toRangeZeroToMax newMaxValue: Double) -> Double {
         return ((self * newMaxValue) / currentMaxValue)
     }
     
@@ -193,7 +193,7 @@ private extension UIColor {
         return RGBA(color: self)
     }
     
-    class func lerp(from from: UIColor.RGBA, to: UIColor.RGBA, percent: CGFloat) -> UIColor {
+    class func lerp(from: UIColor.RGBA, to: UIColor.RGBA, percent: CGFloat) -> UIColor {
         let red = from.red + percent * (to.red - from.red)
         let green = from.green + percent * (to.green - from.green)
         let blue = from.blue + percent * (to.blue - from.blue)

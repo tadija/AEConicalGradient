@@ -30,12 +30,12 @@ import UIKit
     
     You can configure conical gradient options with `gradientLayer` property.
 */
-public class AEConicalGradientView: UIView {
+open class AEConicalGradientView: UIView {
     
     // MARK: - Properties
     
     /// The view’s conical gradient layer used for rendering. (read-only)
-    public var gradientLayer: AEConicalGradientLayer { return layer as! AEConicalGradientLayer }
+    open var gradientLayer: AEConicalGradientLayer { return layer as! AEConicalGradientLayer }
     
     // MARK: - Lifecycle
     
@@ -44,7 +44,7 @@ public class AEConicalGradientView: UIView {
      
         - returns: AEConicalGradientLayer Class
     */
-    public override class func layerClass() -> AnyClass {
+    open override class var layerClass : AnyClass {
         return AEConicalGradientLayer.self
     }
     
@@ -72,8 +72,8 @@ public class AEConicalGradientView: UIView {
         commonInit()
     }
     
-    private func commonInit() {
-        layer.contentsScale = UIScreen.mainScreen().scale
+    fileprivate func commonInit() {
+        layer.contentsScale = UIScreen.main.scale
         layer.drawsAsynchronously = true
         layer.needsDisplayOnBoundsChange = true
         layer.setNeedsDisplay()
