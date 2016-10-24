@@ -1,7 +1,7 @@
 //
-// AEConicalGradientView
+// View.swift
 //
-// Copyright © 2015-2016 Marko Tadić <tadija@me.com> http://tadija.net
+// Copyright (c) 2015-2016 Marko Tadić <tadija@me.com> http://tadija.net
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -26,27 +26,23 @@ import UIKit
 
 /**
     Conical gradient view is simple subclass of UIView 
-    which uses `AEConicalGradientLayer` as the view’s Core Animation layer.
+    which uses `AEConicalGradient.Layer` as the view’s Core Animation layer.
     
-    You can configure conical gradient options with `gradientLayer` property.
+    You can configure conical gradient options in `gradient` property (`AEConicalGradient.Layer`).
 */
-open class AEConicalGradientView: UIView {
+open class View: UIView {
     
     // MARK: - Properties
     
     /// The view’s conical gradient layer used for rendering. (read-only)
-    open var gradientLayer: AEConicalGradientLayer { return layer as! AEConicalGradientLayer }
+    open var gradient: Layer { return layer as! Layer }
+    
+    /// The class used to create the view’s Core Animation layer.
+    open override class var layerClass : AnyClass {
+        return Layer.self
+    }
     
     // MARK: - Lifecycle
-    
-    /**
-        The class used to create the view’s Core Animation layer.
-     
-        - returns: AEConicalGradientLayer Class
-    */
-    open override class var layerClass : AnyClass {
-        return AEConicalGradientLayer.self
-    }
     
     /**
         Initializes and returns a newly allocated conical gradient view object with the specified frame rectangle.
@@ -72,7 +68,7 @@ open class AEConicalGradientView: UIView {
         commonInit()
     }
     
-    fileprivate func commonInit() {
+    private func commonInit() {
         layer.contentsScale = UIScreen.main.scale
         layer.drawsAsynchronously = true
         layer.needsDisplayOnBoundsChange = true
