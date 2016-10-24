@@ -13,41 +13,41 @@ class ViewController: UIViewController {
     
     // MARK: - Properties
     
-    let vividColors = [UIColor.redColor(), UIColor.greenColor(), UIColor.blueColor(), UIColor.cyanColor(), UIColor.yellowColor(), UIColor.magentaColor(), UIColor.orangeColor(), UIColor.purpleColor(), UIColor.brownColor()]
-    let grayscaleColors = [UIColor.whiteColor(), UIColor.lightGrayColor(), UIColor.grayColor(), UIColor.darkGrayColor(), UIColor.blackColor()]
+    let vividColors: [UIColor] = [.red, .green, .blue, .cyan, .yellow, .magenta, .orange, .purple, .brown]
+    let grayscaleColors: [UIColor] = [.white, .lightGray, .gray, .darkGray, .black]
     
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view = AEConicalGradientView()
+        view = AEConicalGradient.View()
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
     
-    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-        if let gradientView = view as? AEConicalGradientView {
-            if UIDevice.currentDevice().orientation.isLandscape {
-                gradientView.gradientLayer.colors = randomSelectionFromColors(grayscaleColors)
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        if let view = view as? AEConicalGradient.View {
+            if UIDevice.current.orientation.isLandscape {
+                view.gradient.colors = randomSelection(from: grayscaleColors)
             } else {
-                gradientView.gradientLayer.colors = randomSelectionFromColors(vividColors)
+                view.gradient.colors = randomSelection(from: vividColors)
             }
         }
     }
     
     // MARK: - Helpers
     
-    func randomSelectionFromColors(sourceColors: [UIColor]) -> [UIColor] {
-        let randomCount = Int.random(2, max: sourceColors.count)
-        var colors = [UIColor]()
+    func randomSelection(from colors: [UIColor]) -> [UIColor] {
+        let randomCount = Int.random(min: 2, max: colors.count)
+        var selectedColors = [UIColor]()
         for _ in 0 ..< randomCount {
-            let randomIndex = Int.random(0, max: sourceColors.count - 1)
-            colors.append(sourceColors[randomIndex])
+            let randomIndex = Int.random(min: 0, max: colors.count - 1)
+            selectedColors.append(colors[randomIndex])
         }
-        return colors
+        return selectedColors
     }
 
 }
