@@ -77,6 +77,20 @@ open class ConicalGradientLayer: CALayer {
         }
     }
     
+    /// Start angle in radians. Defaults to 0.0.
+    open var startAngle: Double = 0.0 {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
+    /// End angle in radians. Defaults to 2 * M_PI.
+    open var endAngle: Double = Constants.MaxAngle {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
     private var transitions = [Transition]()
     
     // MARK: - Lifecycle
@@ -96,10 +110,10 @@ open class ConicalGradientLayer: CALayer {
         let center = CGPoint(x: rect.midX, y: rect.midY)
         let longerSide = max(rect.width, rect.height)
         let radius = Double(longerSide) * M_SQRT2
-        var angle = 0.0
         let step = M_PI_2 / radius
+        var angle = startAngle
         
-        while angle <= Constants.MaxAngle {
+        while angle <= endAngle {
             let pointX = radius * cos(angle) + Double(center.x)
             let pointY = radius * sin(angle) + Double(center.y)
             let startPoint = CGPoint(x: pointX, y: pointY)
