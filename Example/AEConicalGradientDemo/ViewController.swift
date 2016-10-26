@@ -21,7 +21,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view = AEConicalGradient.View()
+        view = ConicalGradientView()
     }
     
     override var prefersStatusBarHidden : Bool {
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        if let view = view as? AEConicalGradient.View {
+        if let view = view as? ConicalGradientView {
             if UIDevice.current.orientation.isLandscape {
                 view.gradient.colors = randomSelection(from: grayscaleColors)
             } else {

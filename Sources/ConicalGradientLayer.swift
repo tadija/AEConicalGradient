@@ -1,5 +1,5 @@
 //
-// Layer.swift
+// ConicalGradientLayer.swift
 //
 // Copyright (c) 2015-2016 Marko Tadić <tadija@me.com> http://tadija.net
 //
@@ -25,8 +25,6 @@
 import UIKit
 
 /**
-    Conical Gradient Layer
- 
     Subclass of `CALayer` which draws a conical gradient over its background color,
     filling the shape of the layer (i.e. including rounded corners).
  
@@ -35,7 +33,7 @@ import UIKit
     If no colors are set, default colors will be used.
     If no locations are set, colors will be equally distributed.
 */
-open class Layer: CALayer {
+open class ConicalGradientLayer: CALayer {
     
     // MARK: - Types
     

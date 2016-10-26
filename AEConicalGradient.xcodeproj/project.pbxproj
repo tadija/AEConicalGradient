@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		8BB80CA31CD8D78600CFB4B9 /* AEConicalGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB80CA21CD8D78600CFB4B9 /* AEConicalGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8BB80CD51CD8D98000CFB4B9 /* Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1F6C3C1BEFCC1C005DC159 /* Layer.swift */; };
-		8BB80CD61CD8D98000CFB4B9 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1F6C3D1BEFCC1C005DC159 /* View.swift */; };
+		8BB80CD51CD8D98000CFB4B9 /* ConicalGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1F6C3C1BEFCC1C005DC159 /* ConicalGradientLayer.swift */; };
+		8BB80CD61CD8D98000CFB4B9 /* ConicalGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1F6C3D1BEFCC1C005DC159 /* ConicalGradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8B1F6C3C1BEFCC1C005DC159 /* Layer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layer.swift; sourceTree = "<group>"; };
-		8B1F6C3D1BEFCC1C005DC159 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		8B1F6C3C1BEFCC1C005DC159 /* ConicalGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConicalGradientLayer.swift; sourceTree = "<group>"; };
+		8B1F6C3D1BEFCC1C005DC159 /* ConicalGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConicalGradientView.swift; sourceTree = "<group>"; };
 		8B1F6C401BEFCC90005DC159 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8B1F6C411BEFCC90005DC159 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8B1F6C441BEFF841005DC159 /* AEConicalGradient.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AEConicalGradient.podspec; sourceTree = "<group>"; };
@@ -56,8 +56,8 @@
 		8B1F6C3B1BEFCC1C005DC159 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				8B1F6C3C1BEFCC1C005DC159 /* Layer.swift */,
-				8B1F6C3D1BEFCC1C005DC159 /* View.swift */,
+				8B1F6C3C1BEFCC1C005DC159 /* ConicalGradientLayer.swift */,
+				8B1F6C3D1BEFCC1C005DC159 /* ConicalGradientView.swift */,
 				8BB80CA81CD8D7D500CFB4B9 /* Supporting Files */,
 			);
 			path = Sources;
@@ -165,8 +165,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BB80CD51CD8D98000CFB4B9 /* Layer.swift in Sources */,
-				8BB80CD61CD8D98000CFB4B9 /* View.swift in Sources */,
+				8BB80CD51CD8D98000CFB4B9 /* ConicalGradientLayer.swift in Sources */,
+				8BB80CD61CD8D98000CFB4B9 /* ConicalGradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
