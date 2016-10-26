@@ -1,7 +1,7 @@
 //
-// AEConicalGradientView
+// ConicalGradientView.swift
 //
-// Copyright © 2015-2016 Marko Tadić <tadija@me.com> http://tadija.net
+// Copyright (c) 2015-2016 Marko Tadić <tadija@me.com> http://tadija.net
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -25,28 +25,23 @@
 import UIKit
 
 /**
-    Conical gradient view is simple subclass of UIView 
-    which uses `AEConicalGradientLayer` as the view’s Core Animation layer.
+    Simple subclass of UIView which uses `AEConicalGradient.Layer` as the view’s Core Animation layer.
     
-    You can configure conical gradient options with `gradientLayer` property.
+    You can configure conical gradient options in `gradient` property.
 */
-public class AEConicalGradientView: UIView {
+open class ConicalGradientView: UIView {
     
     // MARK: - Properties
     
     /// The view’s conical gradient layer used for rendering. (read-only)
-    public var gradientLayer: AEConicalGradientLayer { return layer as! AEConicalGradientLayer }
+    open var gradient: ConicalGradientLayer { return layer as! ConicalGradientLayer }
+    
+    /// The class used to create the view’s Core Animation layer.
+    open override class var layerClass : AnyClass {
+        return ConicalGradientLayer.self
+    }
     
     // MARK: - Lifecycle
-    
-    /**
-        The class used to create the view’s Core Animation layer.
-     
-        - returns: AEConicalGradientLayer Class
-    */
-    public override class func layerClass() -> AnyClass {
-        return AEConicalGradientLayer.self
-    }
     
     /**
         Initializes and returns a newly allocated conical gradient view object with the specified frame rectangle.
@@ -73,7 +68,7 @@ public class AEConicalGradientView: UIView {
     }
     
     private func commonInit() {
-        layer.contentsScale = UIScreen.mainScreen().scale
+        layer.contentsScale = UIScreen.main.scale
         layer.drawsAsynchronously = true
         layer.needsDisplayOnBoundsChange = true
         layer.setNeedsDisplay()

@@ -1,7 +1,7 @@
 //
-// AEConicalGradientLayer
+// ConicalGradientLayer.swift
 //
-// Copyright © 2015-2016 Marko Tadić <tadija@me.com> http://tadija.net
+// Copyright (c) 2015-2016 Marko Tadić <tadija@me.com> http://tadija.net
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@
 import UIKit
 
 /**
-    Conical gradient layer draws a conical gradient over its background color,
+    Subclass of `CALayer` which draws a conical gradient over its background color,
     filling the shape of the layer (i.e. including rounded corners).
  
     You can set colors and locations for the gradient.
@@ -33,7 +33,7 @@ import UIKit
     If no colors are set, default colors will be used.
     If no locations are set, colors will be equally distributed.
 */
-public class AEConicalGradientLayer: CALayer {
+open class ConicalGradientLayer: CALayer {
     
     // MARK: - Types
     
@@ -43,78 +43,103 @@ public class AEConicalGradientLayer: CALayer {
     }
     
     private struct Transition {
+        
         let fromLocation: Double
         let toLocation: Double
+        
         let fromColor: UIColor
         let toColor: UIColor
         
-        func colorForPercent(percent: Double) -> UIColor {
-            let normalizedPercent = percent.convertFromRange(min: fromLocation, max: toLocation, toRangeMin: 0.0, max: 1.0)
+        func color(forPercent percent: Double) -> UIColor {
+            let normalizedPercent = percent.convert(fromMin: fromLocation, max: toLocation, toMin: 0.0, max: 1.0)
             return UIColor.lerp(from: fromColor.rgba, to: toColor.rgba, percent: CGFloat(normalizedPercent))
         }
+        
     }
     
     // MARK: - Properties
     
     /// The array of UIColor objects defining the color of each gradient stop.
     /// Defaults to empty array. Animatable.
-
-    public var colors = [UIColor]() { didSet { setNeedsDisplay() } }
+    open var colors = [UIColor]() {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
-    /// The array of Double values defining the location of each
-    /// gradient stop as a value in the range [0,1]. The values must be
-    /// monotonically increasing. If empty array is given, the stops are
-    /// assumed to spread uniformly across the [0,1] range.
+    /// The array of Double values defining the location of each gradient stop as a value in the range [0,1].
+    /// The values must be monotonically increasing.
+    /// If empty array is given, the stops are assumed to spread uniformly across the [0,1] range.
     /// Defaults to nil. Animatable.
+    open var locations = [Double]() {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
-    public var locations = [Double]() { didSet { setNeedsDisplay() } }
+    /// Start angle in radians. Defaults to 0.0.
+    open var startAngle: Double = 0.0 {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
+    /// End angle in radians. Defaults to 2 * M_PI.
+    open var endAngle: Double = Constants.MaxAngle {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
     
     private var transitions = [Transition]()
     
     // MARK: - Lifecycle
     
     /// This method is doing actual drawing of the conical gradient.
-    public override func drawInContext(ctx: CGContext) {
+    open override func draw(in ctx: CGContext) {
         UIGraphicsPushContext(ctx)
-        drawRect(CGContextGetClipBoundingBox(ctx))
+        draw(in: ctx.boundingBoxOfClipPath)
         UIGraphicsPopContext()
     }
     
     // MARK: - Helpers
     
-    private func drawRect(rect: CGRect) {
+    private func draw(in rect: CGRect) {
         loadTransitions()
         
         let center = CGPoint(x: rect.midX, y: rect.midY)
         let longerSide = max(rect.width, rect.height)
         let radius = Double(longerSide) * M_SQRT2
-        var angle = 0.0
         let step = M_PI_2 / radius
+        var angle = startAngle
         
-        while angle <= Constants.MaxAngle {
+        while angle <= endAngle {
             let pointX = radius * cos(angle) + Double(center.x)
             let pointY = radius * sin(angle) + Double(center.y)
             let startPoint = CGPoint(x: pointX, y: pointY)
             
             let line = UIBezierPath()
-            line.moveToPoint(startPoint)
-            line.addLineToPoint(center)
+            line.move(to: startPoint)
+            line.addLine(to: center)
             
-            colorForAngle(angle).setStroke()
+            color(forAngle: angle).setStroke()
             line.stroke()
             
             angle += step
         }
     }
     
-    private func colorForAngle(angle: Double) -> UIColor {
-        let percent = angle.convertFromRangeZeroToMax(Constants.MaxAngle, toRangeZeroToMax: 1.0)
-        guard let transition = transitionForPercent(percent) else { return spectrumColorForAngle(angle) }
-        return transition.colorForPercent(percent)
+    private func color(forAngle angle: Double) -> UIColor {
+        let percent = angle.convert(fromZeroToMax: Constants.MaxAngle, toZeroToMax: 1.0)
+        
+        guard let transition = transition(forPercent: percent)
+        else { return spectrumColor(forAngle: angle) }
+        
+        return transition.color(forPercent: percent)
     }
     
-    private func spectrumColorForAngle(angle: Double) -> UIColor {
-        let hue = angle.convertFromRangeZeroToMax(Constants.MaxAngle, toRangeZeroToMax: Constants.MaxHue)
+    private func spectrumColor(forAngle angle: Double) -> UIColor {
+        let hue = angle.convert(fromZeroToMax: Constants.MaxAngle, toZeroToMax: Constants.MaxHue)
         return UIColor(hue: CGFloat(hue / Constants.MaxHue), saturation: 1.0, brightness: 1.0, alpha: 1.0)
     }
     
@@ -140,13 +165,14 @@ public class AEConicalGradientLayer: CALayer {
                 fromColor = colors[i]
                 toColor = colors[i + 1]
                 
-                let transition = Transition(fromLocation: fromLocation, toLocation: toLocation, fromColor: fromColor, toColor: toColor)
+                let transition = Transition(fromLocation: fromLocation, toLocation: toLocation,
+                                            fromColor: fromColor, toColor: toColor)
                 transitions.append(transition)
             }
         }
     }
     
-    private func transitionForPercent(percent: Double) -> Transition? {
+    private func transition(forPercent percent: Double) -> Transition? {
         let filtered = transitions.filter { percent >= $0.fromLocation && percent < $0.toLocation }
         let defaultTransition = percent <= 0.5 ? transitions.first : transitions.last
         return filtered.first ?? defaultTransition
@@ -158,7 +184,7 @@ public class AEConicalGradientLayer: CALayer {
 
 private extension Double {
     
-    func convertFromRange(min oldMin: Double, max oldMax: Double, toRangeMin newMin: Double, max newMax: Double) -> Double {
+    func convert(fromMin oldMin: Double, max oldMax: Double, toMin newMin: Double, max newMax: Double) -> Double {
         let oldRange, newRange, newValue: Double
         oldRange = (oldMax - oldMin)
         if (oldRange == 0.0) {
@@ -170,8 +196,8 @@ private extension Double {
         return newValue
     }
     
-    func convertFromRangeZeroToMax(currentMaxValue: Double, toRangeZeroToMax newMaxValue: Double) -> Double {
-        return ((self * newMaxValue) / currentMaxValue)
+    func convert(fromZeroToMax oldMax: Double, toZeroToMax newMax: Double) -> Double {
+        return ((self * newMax) / oldMax)
     }
     
 }
@@ -193,7 +219,7 @@ private extension UIColor {
         return RGBA(color: self)
     }
     
-    class func lerp(from from: UIColor.RGBA, to: UIColor.RGBA, percent: CGFloat) -> UIColor {
+    class func lerp(from: UIColor.RGBA, to: UIColor.RGBA, percent: CGFloat) -> UIColor {
         let red = from.red + percent * (to.red - from.red)
         let green = from.green + percent * (to.green - from.green)
         let blue = from.blue + percent * (to.blue - from.blue)
