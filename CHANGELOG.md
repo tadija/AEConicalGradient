@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 2.1.0
+
+- Updated to recommended settings with Xcode 9.1
+- Migrated to Swift 4
+
 ## Version 2.0.0
 
 - Fixed all build warnings and errors in Xcode 8.1 Beta (8T47)
