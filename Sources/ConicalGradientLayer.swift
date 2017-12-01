@@ -1,7 +1,7 @@
 //
 // ConicalGradientLayer.swift
 //
-// Copyright (c) 2015-2016 Marko Tadić <tadija@me.com> http://tadija.net
+// Copyright (c) 2015-2017 Marko Tadić <tadija@me.com> http://tadija.net
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -38,7 +38,7 @@ open class ConicalGradientLayer: CALayer {
     // MARK: - Types
     
     private struct Constants {
-        static let MaxAngle = 2 * M_PI
+        static let MaxAngle: Double = 2 * .pi
         static let MaxHue = 255.0
     }
     
@@ -109,8 +109,8 @@ open class ConicalGradientLayer: CALayer {
         
         let center = CGPoint(x: rect.midX, y: rect.midY)
         let longerSide = max(rect.width, rect.height)
-        let radius = Double(longerSide) * M_SQRT2
-        let step = M_PI_2 / radius
+        let radius = Double(longerSide) * 2.squareRoot()
+        let step = (.pi / 2) / radius
         var angle = startAngle
         
         while angle <= endAngle {

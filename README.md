@@ -1,7 +1,7 @@
 # AEConicalGradient
 **Conical (angular) gradient in Swift**
 
-[![Language Swift 3.0](https://img.shields.io/badge/Language-Swift%203.0-orange.svg?style=flat)](https://swift.org)
+[![Language Swift 4.0](https://img.shields.io/badge/Language-Swift%204.0-orange.svg?style=flat)](https://swift.org)
 [![Platforms iOS](https://img.shields.io/badge/Platforms-iOS-lightgray.svg?style=flat)](http://www.apple.com)
 [![License MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg?style=flat)](https://github.com/tadija/AEConicalGradient/blob/master/LICENSE)
 
@@ -24,10 +24,6 @@ If no colors are set, default colors will be used. If no locations are set, colo
 - [ConicalGradientView](Sources/ConicalGradientView.swift)  
 Subclass of `UIView` which uses `ConicalGradientLayer` as the view’s Core Animation layer. 
 You can configure conical gradient options with `gradient` property.
-
-## Requirements
-- Xcode 8.0+
-- iOS 8.0+
 
 ## Installation
 
