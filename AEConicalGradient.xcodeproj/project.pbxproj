@@ -39,9 +39,13 @@
 		8B1F6C1D1BEFC98A005DC159 = {
 			isa = PBXGroup;
 			children = (
+				8B1F6C441BEFF841005DC159 /* AEConicalGradient.podspec */,
+				8BB80CD91CD8DB5F00CFB4B9 /* CHANGELOG.md */,
+				8B1F6C401BEFCC90005DC159 /* LICENSE */,
+				8BB80CDA1CD8DC0A00CFB4B9 /* Package.swift */,
+				8B1F6C411BEFCC90005DC159 /* README.md */,
 				8B1F6C3B1BEFCC1C005DC159 /* Sources */,
 				8B1F6C271BEFC98A005DC159 /* Products */,
-				8BB80CC71CD8D8DE00CFB4B9 /* Supporting Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,32 +60,12 @@
 		8B1F6C3B1BEFCC1C005DC159 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8BB80CA21CD8D78600CFB4B9 /* AEConicalGradient.h */,
 				8B1F6C3C1BEFCC1C005DC159 /* ConicalGradientLayer.swift */,
 				8B1F6C3D1BEFCC1C005DC159 /* ConicalGradientView.swift */,
-				8BB80CA81CD8D7D500CFB4B9 /* Supporting Files */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		8BB80CA81CD8D7D500CFB4B9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8BB80CA21CD8D78600CFB4B9 /* AEConicalGradient.h */,
 				8BB80CA41CD8D78600CFB4B9 /* Info.plist */,
 			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		8BB80CC71CD8D8DE00CFB4B9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8B1F6C401BEFCC90005DC159 /* LICENSE */,
-				8B1F6C411BEFCC90005DC159 /* README.md */,
-				8BB80CD91CD8DB5F00CFB4B9 /* CHANGELOG.md */,
-				8B1F6C441BEFF841005DC159 /* AEConicalGradient.podspec */,
-				8BB80CDA1CD8DC0A00CFB4B9 /* Package.swift */,
-			);
-			name = "Supporting Files";
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

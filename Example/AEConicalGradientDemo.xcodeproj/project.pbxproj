@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8BB80CB61CD8D88500CFB4B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB80CB51CD8D88500CFB4B9 /* AppDelegate.swift */; };
-		8BB80CB81CD8D88500CFB4B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB80CB71CD8D88500CFB4B9 /* ViewController.swift */; };
-		8BB80CBB1CD8D88500CFB4B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB80CB91CD8D88500CFB4B9 /* Main.storyboard */; };
-		8BB80CBD1CD8D88500CFB4B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BB80CBC1CD8D88500CFB4B9 /* Assets.xcassets */; };
-		8BB80CC01CD8D88500CFB4B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BB80CBE1CD8D88500CFB4B9 /* LaunchScreen.storyboard */; };
 		8BB80CD01CD8D92400CFB4B9 /* AEConicalGradient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB80CCD1CD8D8F000CFB4B9 /* AEConicalGradient.framework */; };
 		8BB80CD11CD8D92400CFB4B9 /* AEConicalGradient.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8BB80CCD1CD8D8F000CFB4B9 /* AEConicalGradient.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E1345361213650D50064F400 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1345359213650D50064F400 /* ViewController.swift */; };
+		E1345362213650D50064F400 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E134535A213650D50064F400 /* Assets.xcassets */; };
+		E1345365213650D50064F400 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E134535F213650D50064F400 /* AppDelegate.swift */; };
+		E134536C213651240064F400 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1345368213651240064F400 /* LaunchScreen.storyboard */; };
+		E134536D213651240064F400 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E134536A213651240064F400 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,13 +49,13 @@
 
 /* Begin PBXFileReference section */
 		8BB80CB21CD8D88500CFB4B9 /* AEConicalGradientDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AEConicalGradientDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BB80CB51CD8D88500CFB4B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8BB80CB71CD8D88500CFB4B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8BB80CBA1CD8D88500CFB4B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8BB80CBC1CD8D88500CFB4B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8BB80CBF1CD8D88500CFB4B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8BB80CC11CD8D88500CFB4B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BB80CC81CD8D8F000CFB4B9 /* AEConicalGradient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AEConicalGradient.xcodeproj; path = ../AEConicalGradient.xcodeproj; sourceTree = "<group>"; };
+		E1345359213650D50064F400 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E134535A213650D50064F400 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E134535F213650D50064F400 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E1345360213650D50064F400 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1345369213651240064F400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E134536B213651240064F400 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +73,7 @@
 		8BB80CA91CD8D88500CFB4B9 = {
 			isa = PBXGroup;
 			children = (
-				8BB80CB41CD8D88500CFB4B9 /* AEConicalGradientDemo */,
+				E1345358213650D50064F400 /* AEConicalGradientDemo */,
 				8BB80CB31CD8D88500CFB4B9 /* Products */,
 				8BB80CC81CD8D8F000CFB4B9 /* AEConicalGradient.xcodeproj */,
 			);
@@ -87,16 +87,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8BB80CB41CD8D88500CFB4B9 /* AEConicalGradientDemo */ = {
-			isa = PBXGroup;
-			children = (
-				8BB80CB51CD8D88500CFB4B9 /* AppDelegate.swift */,
-				8BB80CB71CD8D88500CFB4B9 /* ViewController.swift */,
-				8BB80CCE1CD8D8F900CFB4B9 /* Supporting Files */,
-			);
-			path = AEConicalGradientDemo;
-			sourceTree = "<group>";
-		};
 		8BB80CC91CD8D8F000CFB4B9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,15 +95,25 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8BB80CCE1CD8D8F900CFB4B9 /* Supporting Files */ = {
+		E1345358213650D50064F400 /* AEConicalGradientDemo */ = {
 			isa = PBXGroup;
 			children = (
-				8BB80CBE1CD8D88500CFB4B9 /* LaunchScreen.storyboard */,
-				8BB80CB91CD8D88500CFB4B9 /* Main.storyboard */,
-				8BB80CBC1CD8D88500CFB4B9 /* Assets.xcassets */,
-				8BB80CC11CD8D88500CFB4B9 /* Info.plist */,
+				E134535F213650D50064F400 /* AppDelegate.swift */,
+				E134535A213650D50064F400 /* Assets.xcassets */,
+				E1345367213651240064F400 /* Base.lproj */,
+				E1345360213650D50064F400 /* Info.plist */,
+				E1345359213650D50064F400 /* ViewController.swift */,
 			);
-			name = "Supporting Files";
+			path = AEConicalGradientDemo;
+			sourceTree = "<group>";
+		};
+		E1345367213651240064F400 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				E1345368213651240064F400 /* LaunchScreen.storyboard */,
+				E134536A213651240064F400 /* Main.storyboard */,
+			);
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,7 +145,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = AE;
 				TargetAttributes = {
 					8BB80CB11CD8D88500CFB4B9 = {
@@ -193,9 +193,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BB80CC01CD8D88500CFB4B9 /* LaunchScreen.storyboard in Resources */,
-				8BB80CBD1CD8D88500CFB4B9 /* Assets.xcassets in Resources */,
-				8BB80CBB1CD8D88500CFB4B9 /* Main.storyboard in Resources */,
+				E134536C213651240064F400 /* LaunchScreen.storyboard in Resources */,
+				E1345362213650D50064F400 /* Assets.xcassets in Resources */,
+				E134536D213651240064F400 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,8 +206,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BB80CB81CD8D88500CFB4B9 /* ViewController.swift in Sources */,
-				8BB80CB61CD8D88500CFB4B9 /* AppDelegate.swift in Sources */,
+				E1345365213650D50064F400 /* AppDelegate.swift in Sources */,
+				E1345361213650D50064F400 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,20 +222,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8BB80CB91CD8D88500CFB4B9 /* Main.storyboard */ = {
+		E1345368213651240064F400 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8BB80CBA1CD8D88500CFB4B9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8BB80CBE1CD8D88500CFB4B9 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8BB80CBF1CD8D88500CFB4B9 /* Base */,
+				E1345369213651240064F400 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E134536A213651240064F400 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E134536B213651240064F400 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -254,12 +254,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -309,12 +311,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
