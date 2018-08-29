@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,11 +17,37 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zA9-d7-GqZ" customClass="ConicalGradientView" customModule="AEConicalGradient">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="zA9-d7-GqZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6JL-GF-YUy"/>
+                            <constraint firstAttribute="bottom" secondItem="zA9-d7-GqZ" secondAttribute="bottom" id="QNf-it-y7I"/>
+                            <constraint firstAttribute="trailing" secondItem="zA9-d7-GqZ" secondAttribute="trailing" id="SrT-lT-9P1"/>
+                            <constraint firstItem="zA9-d7-GqZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="clE-yW-960"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="a3S-8z-S6B"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="05y-Zv-fCW" appends="YES" id="ErX-qN-6ac"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="conicalGradientView" destination="zA9-d7-GqZ" id="ltm-7u-Z1H"/>
+                        <outlet property="tapGestureRecognizer" destination="05y-Zv-fCW" id="Uhd-sA-rtL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="05y-Zv-fCW">
+                    <connections>
+                        <action selector="tapAction:" destination="BYZ-38-t0r" id="g7B-US-pK8"/>
+                        <outlet property="delegate" destination="8bC-Xf-vdC" id="UKr-MS-Gjy"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
         </scene>
     </scenes>
