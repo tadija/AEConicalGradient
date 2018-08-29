@@ -130,12 +130,13 @@ open class ConicalGradientLayer: CALayer {
     }
     
     private func color(forAngle angle: Double) -> UIColor {
-        let percent = angle.convert(fromZeroToMax: Constants.MaxAngle, toZeroToMax: 1.0)
+        let percent = angle.convert(fromMin:startAngle, max:endAngle, toMin:0.0, max:1.0)
         
         guard let transition = transition(forPercent: percent)
         else { return spectrumColor(forAngle: angle) }
         
-        return transition.color(forPercent: percent)
+        let transitionPercent = percent.convert(fromMin:transition.fromLocation, max:transition.toLocation, toMin:0.0, max:1.0)
+        return transition.color(forPercent: transitionPercent)
     }
     
     private func spectrumColor(forAngle angle: Double) -> UIColor {
@@ -183,7 +184,6 @@ open class ConicalGradientLayer: CALayer {
 // MARK: - Extensions
 
 private extension Double {
-    
     func convert(fromMin oldMin: Double, max oldMax: Double, toMin newMin: Double, max newMax: Double) -> Double {
         let oldRange, newRange, newValue: Double
         oldRange = (oldMax - oldMin)
