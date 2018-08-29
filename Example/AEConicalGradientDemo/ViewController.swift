@@ -22,6 +22,14 @@ class ViewController: UIViewController {
         return true
     }
     
+    // MARK: - Life Cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tapAction(self)
+        conicalGradientView.gradient.displayIfNeeded()
+    }
+    
     // MARK: - Actions
     
     @IBAction func tapAction(_ sender: Any) {
