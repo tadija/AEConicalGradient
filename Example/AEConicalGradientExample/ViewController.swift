@@ -7,26 +7,36 @@
 import UIKit
 import AEConicalGradient
 
-class ViewController: UIViewController {
-    
-    // MARK: - Properties
-    
+final class ViewController: UIViewController {
+
+    // MARK: Properties
+
     let vividColors: [UIColor] = [.red, .green, .blue, .cyan, .yellow, .magenta, .orange, .purple, .brown]
     let grayscaleColors: [UIColor] = [.white, .lightGray, .gray, .darkGray, .black]
-    
-    // MARK: - Lifecycle
+
+    // MARK: Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view = ConicalGradientView()
+
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(updateColors))
+        view.addGestureRecognizer(tapGesture)
     }
-    
+
     override var prefersStatusBarHidden : Bool {
         return true
     }
-    
+
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        updateColors()
+    }
+
+    // MARK: Helpers
+
+    @objc
+    private func updateColors() {
         if let view = view as? ConicalGradientView {
             if UIDevice.current.orientation.isLandscape {
                 view.gradient.colors = randomSelection(from: grayscaleColors)
@@ -35,25 +45,15 @@ class ViewController: UIViewController {
             }
         }
     }
-    
-    // MARK: - Helpers
-    
-    func randomSelection(from colors: [UIColor]) -> [UIColor] {
-        let randomCount = Int.random(min: 2, max: colors.count)
+
+    private func randomSelection(from colors: [UIColor]) -> [UIColor] {
+        let randomCount = Int.random(in: 2...colors.count)
         var selectedColors = [UIColor]()
         for _ in 0 ..< randomCount {
-            let randomIndex = Int.random(min: 0, max: colors.count - 1)
+            let randomIndex = Int.random(in: 0..<colors.count)
             selectedColors.append(colors[randomIndex])
         }
         return selectedColors
     }
 
-}
-
-// MARK: - Random
-
-extension Int {
-    static func random(min: Int = 0, max: Int = Int.max) -> Int {
-        return Int(arc4random_uniform(UInt32((max - min) + 1))) + min
-    }
 }
