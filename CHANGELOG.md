@@ -1,5 +1,10 @@
 # Changelog
 
+## Version 2.1.1
+
+- Bumped Swift language version to 4.2 with Xcode 10
+- Minor improvements and refactoring
+
 ## Version 2.1.0
 
 - Updated to recommended settings with Xcode 9.1

@@ -46,3 +46,5 @@ You can configure conical gradient options with `gradient` property.
 
 ## License
 AEConicalGradient is released under the MIT license. See [LICENSE](LICENSE) for details.
+
+`done for fun`

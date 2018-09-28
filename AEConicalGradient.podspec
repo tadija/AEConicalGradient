@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name = 'AEConicalGradient'
-s.version = '2.1.0'
+s.version = '2.1.1'
 s.license = { :type => 'MIT', :file => 'LICENSE' }
 s.summary = 'Conical (angular) gradient in Swift'
 
