@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8BB80CA31CD8D78600CFB4B9 /* AEConicalGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BB80CA21CD8D78600CFB4B9 /* AEConicalGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8BB80CD51CD8D98000CFB4B9 /* ConicalGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1F6C3C1BEFCC1C005DC159 /* ConicalGradientLayer.swift */; };
-		8BB80CD61CD8D98000CFB4B9 /* ConicalGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1F6C3D1BEFCC1C005DC159 /* ConicalGradientView.swift */; };
+		8B6BF11B215EC68D00B75390 /* ConicalGradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6BF119215EC68D00B75390 /* ConicalGradientLayer.swift */; };
+		8B6BF11C215EC68D00B75390 /* ConicalGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6BF11A215EC68D00B75390 /* ConicalGradientView.swift */; };
+		8B6BF11D215EC71000B75390 /* AEConicalGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B6BF115215EC68600B75390 /* AEConicalGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8B1F6C3C1BEFCC1C005DC159 /* ConicalGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConicalGradientLayer.swift; sourceTree = "<group>"; };
-		8B1F6C3D1BEFCC1C005DC159 /* ConicalGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConicalGradientView.swift; sourceTree = "<group>"; };
 		8B1F6C401BEFCC90005DC159 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8B1F6C411BEFCC90005DC159 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8B1F6C441BEFF841005DC159 /* AEConicalGradient.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = AEConicalGradient.podspec; sourceTree = "<group>"; };
+		8B6BF115215EC68600B75390 /* AEConicalGradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEConicalGradient.h; sourceTree = "<group>"; };
+		8B6BF116215EC68600B75390 /* AEConicalGradient.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AEConicalGradient.plist; sourceTree = "<group>"; };
+		8B6BF119215EC68D00B75390 /* ConicalGradientLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConicalGradientLayer.swift; sourceTree = "<group>"; };
+		8B6BF11A215EC68D00B75390 /* ConicalGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConicalGradientView.swift; sourceTree = "<group>"; };
 		8BB80CA01CD8D78600CFB4B9 /* AEConicalGradient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AEConicalGradient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BB80CA21CD8D78600CFB4B9 /* AEConicalGradient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AEConicalGradient.h; sourceTree = "<group>"; };
-		8BB80CA41CD8D78600CFB4B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BB80CD91CD8DB5F00CFB4B9 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		8BB80CDA1CD8DC0A00CFB4B9 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -39,7 +39,9 @@
 		8B1F6C1D1BEFC98A005DC159 = {
 			isa = PBXGroup;
 			children = (
-				8B1F6C3B1BEFCC1C005DC159 /* Sources */,
+				8BB80CDA1CD8DC0A00CFB4B9 /* Package.swift */,
+				8B6BF114215EC68600B75390 /* Resources */,
+				8B6BF117215EC68D00B75390 /* Sources */,
 				8B1F6C271BEFC98A005DC159 /* Products */,
 				8BB80CC71CD8D8DE00CFB4B9 /* Supporting Files */,
 			);
@@ -53,23 +55,30 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8B1F6C3B1BEFCC1C005DC159 /* Sources */ = {
+		8B6BF114215EC68600B75390 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8B1F6C3C1BEFCC1C005DC159 /* ConicalGradientLayer.swift */,
-				8B1F6C3D1BEFCC1C005DC159 /* ConicalGradientView.swift */,
-				8BB80CA81CD8D7D500CFB4B9 /* Supporting Files */,
+				8B6BF115215EC68600B75390 /* AEConicalGradient.h */,
+				8B6BF116215EC68600B75390 /* AEConicalGradient.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8B6BF117215EC68D00B75390 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8B6BF118215EC68D00B75390 /* AEConicalGradient */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		8BB80CA81CD8D7D500CFB4B9 /* Supporting Files */ = {
+		8B6BF118215EC68D00B75390 /* AEConicalGradient */ = {
 			isa = PBXGroup;
 			children = (
-				8BB80CA21CD8D78600CFB4B9 /* AEConicalGradient.h */,
-				8BB80CA41CD8D78600CFB4B9 /* Info.plist */,
+				8B6BF119215EC68D00B75390 /* ConicalGradientLayer.swift */,
+				8B6BF11A215EC68D00B75390 /* ConicalGradientView.swift */,
 			);
-			name = "Supporting Files";
+			path = AEConicalGradient;
 			sourceTree = "<group>";
 		};
 		8BB80CC71CD8D8DE00CFB4B9 /* Supporting Files */ = {
@@ -79,7 +88,6 @@
 				8B1F6C411BEFCC90005DC159 /* README.md */,
 				8BB80CD91CD8DB5F00CFB4B9 /* CHANGELOG.md */,
 				8B1F6C441BEFF841005DC159 /* AEConicalGradient.podspec */,
-				8BB80CDA1CD8DC0A00CFB4B9 /* Package.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -91,7 +99,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BB80CA31CD8D78600CFB4B9 /* AEConicalGradient.h in Headers */,
+				8B6BF11D215EC71000B75390 /* AEConicalGradient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,8 +173,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8BB80CD51CD8D98000CFB4B9 /* ConicalGradientLayer.swift in Sources */,
-				8BB80CD61CD8D98000CFB4B9 /* ConicalGradientView.swift in Sources */,
+				8B6BF11C215EC68D00B75390 /* ConicalGradientView.swift in Sources */,
+				8B6BF11B215EC68D00B75390 /* ConicalGradientLayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +297,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = Resources/AEConicalGradient.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.tadija.AEConicalGradient;
@@ -310,7 +318,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = Resources/AEConicalGradient.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.tadija.AEConicalGradient;
