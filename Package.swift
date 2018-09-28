@@ -1,3 +1,5 @@
+// swift-tools-version:4.2
+
 //
 // Package.swift
 //
@@ -25,5 +27,13 @@
 import PackageDescription
 
 let package = Package(
-    name: "AEConicalGradient"
+    name: "AEConicalGradient",
+    products: [
+        .library(name: "AEConicalGradient", targets: ["AEConicalGradient"])
+    ],
+    targets: [
+        .target(
+            name: "AEConicalGradient"
+        )
+    ]
 )
