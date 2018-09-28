@@ -48,7 +48,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8BB80CB21CD8D88500CFB4B9 /* AEConicalGradientDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AEConicalGradientDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BB80CB21CD8D88500CFB4B9 /* AEConicalGradientExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AEConicalGradientExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BB80CB51CD8D88500CFB4B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BB80CB71CD8D88500CFB4B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8BB80CBA1CD8D88500CFB4B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -73,28 +73,28 @@
 		8BB80CA91CD8D88500CFB4B9 = {
 			isa = PBXGroup;
 			children = (
-				8BB80CB41CD8D88500CFB4B9 /* AEConicalGradientDemo */,
-				8BB80CB31CD8D88500CFB4B9 /* Products */,
 				8BB80CC81CD8D8F000CFB4B9 /* AEConicalGradient.xcodeproj */,
+				8BB80CB41CD8D88500CFB4B9 /* AEConicalGradientExample */,
+				8BB80CB31CD8D88500CFB4B9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
 		8BB80CB31CD8D88500CFB4B9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8BB80CB21CD8D88500CFB4B9 /* AEConicalGradientDemo.app */,
+				8BB80CB21CD8D88500CFB4B9 /* AEConicalGradientExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8BB80CB41CD8D88500CFB4B9 /* AEConicalGradientDemo */ = {
+		8BB80CB41CD8D88500CFB4B9 /* AEConicalGradientExample */ = {
 			isa = PBXGroup;
 			children = (
 				8BB80CB51CD8D88500CFB4B9 /* AppDelegate.swift */,
 				8BB80CB71CD8D88500CFB4B9 /* ViewController.swift */,
 				8BB80CCE1CD8D8F900CFB4B9 /* Supporting Files */,
 			);
-			path = AEConicalGradientDemo;
+			path = AEConicalGradientExample;
 			sourceTree = "<group>";
 		};
 		8BB80CC91CD8D8F000CFB4B9 /* Products */ = {
@@ -119,9 +119,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8BB80CB11CD8D88500CFB4B9 /* AEConicalGradientDemo */ = {
+		8BB80CB11CD8D88500CFB4B9 /* AEConicalGradientExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8BB80CC41CD8D88500CFB4B9 /* Build configuration list for PBXNativeTarget "AEConicalGradientDemo" */;
+			buildConfigurationList = 8BB80CC41CD8D88500CFB4B9 /* Build configuration list for PBXNativeTarget "AEConicalGradientExample" */;
 			buildPhases = (
 				8BB80CAE1CD8D88500CFB4B9 /* Sources */,
 				8BB80CAF1CD8D88500CFB4B9 /* Frameworks */,
@@ -133,9 +133,9 @@
 			dependencies = (
 				8BB80CD31CD8D92400CFB4B9 /* PBXTargetDependency */,
 			);
-			name = AEConicalGradientDemo;
+			name = AEConicalGradientExample;
 			productName = AEConicalGradientDemo;
-			productReference = 8BB80CB21CD8D88500CFB4B9 /* AEConicalGradientDemo.app */;
+			productReference = 8BB80CB21CD8D88500CFB4B9 /* AEConicalGradientExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -145,7 +145,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = AE;
 				TargetAttributes = {
 					8BB80CB11CD8D88500CFB4B9 = {
@@ -154,7 +154,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8BB80CAD1CD8D88500CFB4B9 /* Build configuration list for PBXProject "AEConicalGradientDemo" */;
+			buildConfigurationList = 8BB80CAD1CD8D88500CFB4B9 /* Build configuration list for PBXProject "AEConicalGradientExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -173,7 +173,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				8BB80CB11CD8D88500CFB4B9 /* AEConicalGradientDemo */,
+				8BB80CB11CD8D88500CFB4B9 /* AEConicalGradientExample */,
 			);
 		};
 /* End PBXProject section */
@@ -254,12 +254,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -291,7 +293,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -309,12 +311,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -339,7 +343,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -349,9 +353,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = AEConicalGradientDemo/Info.plist;
+				INFOPLIST_FILE = AEConicalGradientExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.tadija.AEConicalGradientDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = net.tadija.AEConicalGradientExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -360,9 +364,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = AEConicalGradientDemo/Info.plist;
+				INFOPLIST_FILE = AEConicalGradientExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = net.tadija.AEConicalGradientDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = net.tadija.AEConicalGradientExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -370,7 +374,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8BB80CAD1CD8D88500CFB4B9 /* Build configuration list for PBXProject "AEConicalGradientDemo" */ = {
+		8BB80CAD1CD8D88500CFB4B9 /* Build configuration list for PBXProject "AEConicalGradientExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8BB80CC21CD8D88500CFB4B9 /* Debug */,
@@ -379,7 +383,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8BB80CC41CD8D88500CFB4B9 /* Build configuration list for PBXNativeTarget "AEConicalGradientDemo" */ = {
+		8BB80CC41CD8D88500CFB4B9 /* Build configuration list for PBXNativeTarget "AEConicalGradientExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8BB80CC51CD8D88500CFB4B9 /* Debug */,
