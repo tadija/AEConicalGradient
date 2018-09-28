@@ -1,10 +1,8 @@
-//
-//  ViewController.swift
-//  AEConicalGradient
-//
-//  Created by Marko Tadic on 11/8/15.
-//  Copyright © 2015 AE. All rights reserved.
-//
+/**
+ *  https://github.com/tadija/AEConicalGradient
+ *  Copyright (c) Marko Tadić 2015-2018
+ *  Licensed under the MIT license. See LICENSE file.
+ */
 
 import UIKit
 import AEConicalGradient
